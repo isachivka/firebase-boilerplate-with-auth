@@ -1,18 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { auth } from '../firebase'
-import { UserContext } from '.'
 
 const onClickLogout = () => {
   auth.signOut()
 }
 
 const Logout = () => {
-  const user = useContext(UserContext)
-
-  if (user)
-    return <button onClick={onClickLogout}>Logout</button>
-
-  return null
+  return <button onClick={onClickLogout}>Logout</button>
 }
 
 export default Logout
