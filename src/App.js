@@ -1,6 +1,6 @@
 import React from 'react'
+import { authDecorator } from './auth'
 import Input from './Input'
-import authDecorator from './auth/Auth'
 
 function App() {
   return <Input />

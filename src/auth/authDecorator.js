@@ -1,11 +1,6 @@
-import React, {
-  useState,
-  useEffect,
-  createContext,
-} from 'react'
+import React, { useState, useEffect } from 'react'
 import firebase, { auth } from '../firebase'
-
-const UserContext = createContext(null)
+import { UserContext } from '.'
 
 function authDecorator(WrappedComponent) {
   return function AuthDecorator() {
@@ -36,7 +31,5 @@ function authDecorator(WrappedComponent) {
     )
   }
 }
-
-export { UserContext }
 
 export default authDecorator

@@ -4,7 +4,7 @@ import React, {
   useEffect,
 } from 'react'
 import { getMessagesRef } from './firebase/messages'
-import { UserContext } from './auth/Auth'
+import { UserContext } from './auth'
 
 function useControlledInput(initialValue = '') {
   const [text, setText] = useState(initialValue)
