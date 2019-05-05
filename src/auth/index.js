@@ -1,4 +1,6 @@
-import authDecorator from './authDecorator'
+import Auth from './Auth'
 import UserContext from './UserContext'
+import Logout from './Logout'
+import Login from './Login'
 
-export { authDecorator, UserContext }
+export { Auth, UserContext, Logout, Login }

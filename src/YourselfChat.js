@@ -26,7 +26,7 @@ function useMessages(user) {
     )
 
     return () => {
-      getMessagesRef(user.uid).off(un)
+      getMessagesRef(user.uid).off('value', un)
     }
   }, [user])
 
@@ -40,7 +40,7 @@ function useMessages(user) {
   return [messages, appendMessage]
 }
 
-function Input() {
+function YourselfChat() {
   const user = useContext(UserContext)
   const [text, onChange] = useControlledInput()
   const [messages, appendMessage] = useMessages(user)
@@ -62,4 +62,4 @@ function Input() {
   )
 }
 
-export default Input
+export default YourselfChat
