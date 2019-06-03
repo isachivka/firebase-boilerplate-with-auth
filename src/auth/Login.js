@@ -6,10 +6,10 @@ const onClickLogin = () => {
   auth
     .signInWithPopup(provider)
     .then(result => {
-      console.log('success auth', result)
+      console.info('Auth success:', result)
     })
-    .catch(function(error) {
-      console.log('error auth', error)
+    .catch(error => {
+      console.error('Auth error: ', error)
     })
 }
 
